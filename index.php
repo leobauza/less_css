@@ -58,7 +58,7 @@
 		<div class="span8 box">hi</div>
 		<div class="span4 box">hi</div>
 	</section>
-	<section class="row-fluid">
+	<section class="row-fluid-alt">
 		<div class="span6 box">
 			<header>
 				<h3>Button Sets</h3>
