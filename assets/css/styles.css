@@ -842,7 +842,7 @@ form .pretty-radio.active {
   zoom: 1;
   _height: 17px;
 }
-.btn-dropdown > a {
+.btn-dropdown  > a {
   float: left;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -857,12 +857,12 @@ form .pretty-radio.active {
   font-size: 1.2em;
   font-weight: bold;
 }
-.btn-dropdown > a.btn-drop {
+.btn-dropdown  > a.btn-drop {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-.btn-dropdown > a .carat {
+.btn-dropdown  > a .carat {
   text-indent: -999999px;
   display: block;
 }
