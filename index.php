@@ -1,5 +1,6 @@
 	<?php include('_inc/header.php'); ?> 
 
+<!-- GRID -->
 <section class="container">
 	<h1>Twelve Column Grid</h1>
 	<!-- 
@@ -58,133 +59,250 @@
 		<div class="span8 box">hi</div>
 		<div class="span4 box">hi</div>
 	</section>
+</section>
+
+<!-- BUTTONS -->
+<section class="container">
+	<h2>New Better Btn Mark Up</h2>
+	<p>Base class of .btn and all classes following .btn-property and the property is camel cased if more than one word</p>
 	<section class="row-fluid-alt">
-		<div class="span6 box">
+		<div class="span4">
+			<h2>Button Colours</h2>
+			<p>(main, secondary, grey, custom)</p>
+			<a href="#" class="btn btn-main">main</a>
+			<a href="#" class="btn btn-secondary">secondary</a>
+			<a href="#" class="btn btn-grey">grey</a>
+			<a href="#" class="btn btn-customColour">custom</a>
+			<p>Active State (custom is black so you can't see it)</p>
+			<a href="#" class="btn active btn-main">main</a>
+			<a href="#" class="btn active btn-secondary">secondary</a>
+			<a href="#" class="btn active btn-grey">grey</a>
+			<a href="#" class="btn active btn-customColour">custom</a>
+		</div>
+		<div class="span4">
+			<h2>Button Sizes</h2>
+			<p>(smaller, small, medium, large, larger, custom)</p>
+			<a href="#" class="btn btn-main btn-smaller">smaller</a>
+			<a href="#" class="btn btn-main btn-small">small</a>
+			<a href="#" class="btn btn-main btn-medium">medium</a>
+			<a href="#" class="btn btn-main btn-large">large</a>
+			<a href="#" class="btn btn-main btn-larger">larger</a>
+			<a href="#" class="btn btn-main btn-customSize">custom</a>
+		</div>
+		<div class="span4">
+			<h2>Other Buttons</h2>
+			<p>(sets, dropdowns, etc)</p>
 			<header>
 				<h3>Button Sets</h3>
 			</header>
 			<div class="btn-set group">
-				<a href="#" class="btn-main">1</a>
+				<a href="#" class="btn-main active">1</a>
 				<a href="#" class="btn-main">2</a>
 				<a href="#" class="btn-main">3</a>
 				<a href="#" class="btn-main">4</a>
 			</div>
-			<div class="btn-set-dropdown group">
+
+			<div class="btn-dropdown dropdown-main group">
 				<a href="#" class="btn-main">Button w/ Dropdown</a>
-				<a href="#" class="btn-main drop"><span class="carat">v</span></a>
+				<a href="#" class="btn-main btn-drop"><span class="carat">v</span></a>
 				<ul>
 					<li><a href="#">the</a></li>
 					<li><a href="#">drop</a></li>
 					<li><a href="#">down</a></li>
 				</ul>
 			</div>
-			<footer class="spacer">
-				
-			</footer>
-		</div>
-		<div class="span6 box">
-			<header>
-				<h3>Button Sets Secondary</h3>
-			</header>
-			<div class="btn-set group">
-				<a href="#" class="btn-secondary">1</a>
-				<a href="#" class="btn-secondary">2</a>
-				<a href="#" class="btn-secondary">3</a>
-				<a href="#" class="btn-secondary">4</a>
-			</div>
-			<div class="btn-set-dropdown group">
+
+			<div class="btn-dropdown dropdown-secondary group">
 				<a href="#" class="btn-secondary">Button w/ Dropdown</a>
-				<a href="#" class="btn-secondary drop"><span class="carat">v</span></a>
+				<a href="#" class="btn-secondary btn-drop"><span class="carat">v</span></a>
 				<ul>
 					<li><a href="#">the</a></li>
 					<li><a href="#">drop</a></li>
 					<li><a href="#">down</a></li>
 				</ul>
 			</div>
-			<footer class="spacer">
-				
-			</footer>
-		</div>
-	</section>
-	<section class="row-fluid">
-		<div class="span10 box">
-			<header>
-				<h3>Centered Buttons</h3>
-			</header>
-			<a href="#" class="btn-main">Plain Button</a>
-			<a href="#" class="btn-secondary">Secondary Button</a>
-			<div class="ctr-btn">
-				<a href="#" class="btn-main btn-larger">Larger Button</a>
-				<a href="#" class="btn-secondary btn-larger">Secondary Button</a>
-				<a href="#" class="btn-main btn-large">Large Button</a>
-				<a href="#" class="btn-secondary btn-large">Secondary Button</a>
-				<a href="#" class="btn-main btn-medium">Medium Button</a>
-				<a href="#" class="btn-secondary btn-medium">Secondary Button</a>
-				<a href="#" class="btn-main btn-small">Small Button</a>
-				<a href="#" class="btn-secondary btn-small">Secondary Button</a>
-				<a href="#" class="btn-main btn-smaller">Smaller Button</a>
-				<a href="#" class="btn-secondary btn-smaller">Secondary Button</a>
+
+			<div class="btn-dropdown dropdown-grey group">
+				<a href="#" class="btn-grey">Button w/ Dropdown</a>
+				<a href="#" class="btn-grey btn-drop"><span class="carat">v</span></a>
+				<ul>
+					<li><a href="#">the</a></li>
+					<li><a href="#">drop</a></li>
+					<li><a href="#">down</a></li>
+				</ul>
 			</div>
+
+
 		</div>
-		<div class="span2 box">hi</div>
 	</section>
-	<section class="row-fluid">
-		<div class="span11 box">
-			<header>
-				<h3>Buttons</h3>
-			</header>
-			<a href="#" class="btn-main">Plain Button</a>
-			<a href="#" class="btn-secondary">Secondary Button</a>
-			<a href="#" class="btn-main btn-larger">Larger Button</a>
-			<a href="#" class="btn-secondary btn-larger">Secondary Button</a>
-			<a href="#" class="btn-main btn-large">Large Button</a>
-			<a href="#" class="btn-secondary btn-large">Secondary Button</a>
-			<a href="#" class="btn-main btn-medium">Medium Button</a>
-			<a href="#" class="btn-secondary btn-medium">Secondary Button</a>
-			<a href="#" class="btn-main btn-small">Small Button</a>
-			<a href="#" class="btn-secondary btn-small">Secondary Button</a>
-			<a href="#" class="btn-main btn-smaller">Smaller Button</a>
-			<a href="#" class="btn-secondary btn-smaller">Secondary Button</a>
-		</div>
-		<div class="span1 box">hi</div>
-	</section>
-	<section class="row-fluid">
-		<div class="span12 box">hi</div>
-	</section>	
-	<div class="row-fluid">
-		<section class="span8 box">
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
-		</section>
-		<aside class="span4 box">
-			<h1><a href="#">Heading 1</a></h1>
-			<h2><a href="#">Heading 2</a></h2>
-			<h3><a href="#">Heading 3</a></h3>
-			<h4><a href="#">Heading 4</a></h4>
-			<h5><a href="#">Heading 5</a></h5>
-			<h6><a href="#">Heading 6</a></h6>
-		</aside>
-	</div>
 </section>
 
-
-	<!-- forms -->
+<!-- LISTS -->
 <section class="container">
-	<form>
-		<div class="form-group">
-			<label>Label</label>
-			<input type="text" placeholder="placeholder"></input>
-			<input type="text"></input>
+	<h2></h2>
+	<section class="row-fluid">
+		<!-- unordered lists -->
+		<div class="span6">
+			<!-- ONE LEVEL -->
+			<h3>Unordered List (Basic)</h3>
+			<ul>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three</li>
+				<li>item four</li>
+			</ul>
+			<!-- TWO LEVELS -->
+			<h3>Unordered List (Expert)</h3>
+			<ul>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ul>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three</li>
+							<li>nested item four</li>
+						</ul>
+				</li>
+				<li>item four</li>
+			</ul>
+			<!-- THREE LEVELS -->
+			<h3>Unordered List (Madness)</h3>
+			<ul>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ul>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three
+								<!-- level three -->
+								<ul>
+									<li>nested nested item one</li>
+									<li>nested nested item two</li>
+									<li>nested nested item three</li>
+								</ul>
+							</li>
+							<li>nested item four</li>
+						</ul>
+				</li>
+				<li>item four</li>
+			</ul>
+			<!-- INCEPTION -->
+			<h3>Unordered List (INCEPTION BRAMMMMMMM)</h3>
+			<ul>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ul>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three
+								<!-- level three -->
+								<ul>
+									<li>nested nested item one</li>
+									<li>nested nested item two
+										<!-- level inception -->
+										<ul>
+											<li>inception nested nested item one</li>
+											<li>inception nested nested item two</li>
+											<li>inception nested nested item three</li>
+										</ul>
+									</li>
+									<li>nested nested item three</li>
+								</ul>
+							</li>
+							<li>nested item four</li>
+						</ul>
+				</li>
+				<li>item four</li>
+			</ul>
+			<!-- out of the dream -->
 		</div>
-		<textarea></textarea>
-		<div class="input-group">
-			<button type="submit" value="submit" class="btn-gray">Submit</button>
+		<!-- ordered lists -->
+		<div class="span6">
+			<!-- ONE LEVEL -->
+			<h3>ordered List (Basic)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three</li>
+				<li>item four</li>
+			</ol>
+			<!-- TWO LEVELS -->
+			<h3>ordered List (Expert)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ol>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three</li>
+							<li>nested item four</li>
+						</ol>
+				</li>
+				<li>item four</li>
+			</ol>
+			<!-- THREE LEVELS -->
+			<h3>ordered List (Madness)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ol>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three
+								<!-- level three -->
+								<ol>
+									<li>nested nested item one</li>
+									<li>nested nested item two</li>
+									<li>nested nested item three</li>
+								</ol>
+							</li>
+							<li>nested item four</li>
+						</ol>
+				</li>
+				<li>item four</li>
+			</ol>
+			<!-- INCEPTION -->
+			<h3>ordered List (INCEPTION BRAMMMMMMM)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ol>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three
+								<!-- level three -->
+								<ol>
+									<li>nested nested item one</li>
+									<li>nested nested item two
+										<!-- level inception -->
+										<ol>
+											<li>inception nested nested item one</li>
+											<li>inception nested nested item two</li>
+											<li>inception nested nested item three</li>
+										</ol>
+									</li>
+									<li>nested nested item three</li>
+								</ol>
+							</li>
+							<li>nested item four</li>
+						</ol>
+				</li>
+				<li>item four</li>
+			</ol>
 		</div>
-	</form>
+	</section>
 </section>
 
 	 <?php include('_inc/footer.php')?>

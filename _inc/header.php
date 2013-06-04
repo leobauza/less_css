@@ -23,20 +23,23 @@
 <body>
 	<header class="site-header container">
 		<h1>Site Name</h1>
-		<nav class="site-nav">
-			<ul class="nav">
-				<li class="dropdown first">
-					<a href="#">Has Dropdown</a>
-					<ul class="dropdown-menu">
-						<li class="first"><a href="#">first</a></li>
-						<li><a href="#">second</a></li>
-						<li><a href="#">third</a></li>
-						<li class="last"><a href="#">last</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Two No Drop</a></li>
-				<li><a href="#">Three No Drop</a></li>
-				<li class="last"><a href="#">Four No Drop</a></li>
-			</ul>
-		</nav>
 	</header>
+	<nav class="site-nav nav-horizontal" data-image="true">
+		<ul class="menu menu-left">
+			<li class="first dropdown">
+				<a href="#">item one</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">sub one</a></li>
+					<li><a href="#">sub two</a></li>
+					<li><a href="#">sub three</a></li>
+				</ul>
+			</li>
+			<li><a href="#">item two</a></li>
+			<li><a href="#">item three</a></li>
+			<li class="last"><a href="#">item four</a></li>
+		</ul>
+		<ul class="menu menu-right">
+			<li class="first"><a href="#">something</a></li>
+			<li class="last"><a href="#">somewhat</a></li>
+		</ul>
+	</nav>
