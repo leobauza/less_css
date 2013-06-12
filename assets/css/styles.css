@@ -18,10 +18,10 @@
  */
 /****** Container ******/
 .container {
-  padding: 20px 2%;
+  padding: 20px 3%;
 }
 .container-alt {
-  padding: 20px 2%;
+  padding: 20px 3%;
   background: #f5f5f5;
 }
 /* 
@@ -36,7 +36,7 @@
 /*margin right instead of margin left to do overflow hidden*//*Use this to set exact percentages and have the last box be ok*/
 .row-fluid > [class*="span"] {
   float: left;
-  margin-right: 2%;
+  margin-right: 3%;
 }
 .row-fluid > [class*="span"].l,
 .row-fluid > [class*="span"]:last-child {
@@ -46,40 +46,40 @@
   overflow: hidden;
 }
 .row-fluid .span1 {
-  width: 6.515151511818182%;
+  width: 5.606060602727273%;
 }
 .row-fluid .span2 {
-  width: 14.999999993333335%;
+  width: 14.16666666%;
 }
 .row-fluid .span3 {
-  width: 23.49999999%;
+  width: 22.74999999%;
 }
 .row-fluid .span4 {
-  width: 31.99999998666667%;
+  width: 31.33333332%;
 }
 .row-fluid .span5 {
-  width: 39.66666665%;
+  width: 38.66666665%;
 }
 .row-fluid .span6 {
-  width: 48.99999998%;
+  width: 48.49999998%;
 }
 .row-fluid .span7 {
-  width: 56.33333331%;
+  width: 55.33333331%;
 }
 .row-fluid .span8 {
-  width: 64.66666664%;
+  width: 63.66666664%;
 }
 .row-fluid .span9 {
-  width: 72.99999997%;
+  width: 71.99999997%;
 }
 .row-fluid .span10 {
-  width: 81.3333333%;
+  width: 80.3333333%;
 }
 .row-fluid .span11 {
-  width: 89.66666663000001%;
+  width: 88.66666663000001%;
 }
 .row-fluid .span12 {
-  width: 97.99999996%;
+  width: 96.99999996%;
 }
 /* 
  * =============================================================
@@ -93,47 +93,47 @@
 }
 .row-fluid-alt > [class*="span"] {
   float: left;
-  margin-right: 2%;
+  margin-right: 3%;
 }
 .row-fluid-alt > [class*="span"].l,
 .row-fluid-alt > [class*="span"]:last-child {
   margin-right: 0;
 }
 .row-fluid-alt .span1 {
-  width: 6.504040400718182%;
+  width: 5.594949491627273%;
 }
 .row-fluid-alt .span2 {
-  width: 14.988888882233335%;
+  width: 14.1555555489%;
 }
 .row-fluid-alt .span3 {
-  width: 23.4888888789%;
+  width: 22.7388888789%;
 }
 .row-fluid-alt .span4 {
-  width: 31.98888887556667%;
+  width: 31.3222222089%;
 }
 .row-fluid-alt .span5 {
-  width: 39.6555555389%;
+  width: 38.6555555389%;
 }
 .row-fluid-alt .span6 {
-  width: 48.9888888689%;
+  width: 48.4888888689%;
 }
 .row-fluid-alt .span7 {
-  width: 56.3222221989%;
+  width: 55.3222221989%;
 }
 .row-fluid-alt .span8 {
-  width: 64.6555555289%;
+  width: 63.6555555289%;
 }
 .row-fluid-alt .span9 {
-  width: 72.9888888589%;
+  width: 71.9888888589%;
 }
 .row-fluid-alt .span10 {
-  width: 81.3222221889%;
+  width: 80.3222221889%;
 }
 .row-fluid-alt .span11 {
-  width: 89.6555555189%;
+  width: 88.6555555189%;
 }
 .row-fluid-alt .span12 {
-  width: 97.98888884889999%;
+  width: 96.98888884889999%;
 }
 /* 
  * =============================================================
@@ -1129,7 +1129,7 @@ form .pretty-radio.active {
 }
 .site-nav.nav-horizontal {
   zoom: 1;
-  background: #272727;
+  background: #383131;
 }
 .site-nav.nav-horizontal:before {
   display: table;
@@ -1166,13 +1166,13 @@ form .pretty-radio.active {
 .site-nav.nav-horizontal > ul > li > a {
   float: left;
   color: #ffffff;
-  border-right: 1px solid #1f1f1f;
+  border-right: 1px solid #0f0d0d;
   display: block;
   padding: 25px 20px;
   font-size: 1.2em;
 }
 .site-nav.nav-horizontal > ul > li > a:hover {
-  background: #1f1f1f;
+  background: #0f0d0d;
   text-decoration: none;
 }
 @media (max-width: 1024px) {
@@ -1186,7 +1186,7 @@ form .pretty-radio.active {
   color: #ffffff;
   padding: 25px 10px;
   font-size: 1.2em;
-  border-right: 1px solid #1f1f1f;
+  border-right: 1px solid #0f0d0d;
 }
 @media (max-width: 1024px) {
   .site-nav.nav-horizontal > ul > li .btn-dropdown {
@@ -1194,18 +1194,22 @@ form .pretty-radio.active {
   }
 }
 .site-nav.nav-horizontal > ul > li > ul {
-  position: absolute;
-  top: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 100%;
+  position: absolute;
+  top: 100%;
+  min-width: 200px;
   display: none;
+  background: #383131;
 }
 .site-nav.nav-horizontal > ul > li > ul > li {
   margin: 0;
 }
 .site-nav.nav-horizontal > ul > li > ul > li a {
+  display: block;
+  padding: 10px 20px;
   font-size: 1.2em;
 }
 .site-nav.nav-horizontal > ul > li > ul > li a:hover {
@@ -1219,7 +1223,7 @@ form .pretty-radio.active {
   float: right;
 }
 .menu.menu-right li.first {
-  border-left: 1px solid #1f1f1f;
+  border-left: 1px solid #0f0d0d;
 }
 .menu.menu-right li.last a {
   border: none;
@@ -1293,6 +1297,16 @@ form .pretty-radio.active {
 #admin-menu .dropdown li {
   line-height: 1.2em;
 }
+/* 
+ * =============================================================
+ * ALL SUBTHEME LESS
+ * =============================================================
+ */
+/* 
+ * =============================================================
+ * GENERAL RESPONSIVENESS
+ * =============================================================
+ */
 @media (max-width: 959px) {
   /*margin right instead of margin left to do overflow hidden*/
   [class*="row-fluid"] > [class*="span"] {
