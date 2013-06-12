@@ -13,15 +13,28 @@
  */
 /* 
  * =============================================================
+ * TEXT LIB (part of wash)
+ * =============================================================
+ */
+.helvetica {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+/* 
+ * =============================================================
+ * COLOUR LIB (part of wash)
+ * =============================================================
+ */
+/* 
+ * =============================================================
  * STRUCTURE LIB (part of wash)
  * =============================================================
  */
 /****** Container ******/
 .container {
-  padding: 20px 3%;
+  padding: 20px 2%;
 }
 .container-alt {
-  padding: 20px 3%;
+  padding: 20px 2%;
   background: #f5f5f5;
 }
 /* 
@@ -36,7 +49,7 @@
 /*margin right instead of margin left to do overflow hidden*//*Use this to set exact percentages and have the last box be ok*/
 .row-fluid > [class*="span"] {
   float: left;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 .row-fluid > [class*="span"].l,
 .row-fluid > [class*="span"]:last-child {
@@ -44,42 +57,45 @@
   width: auto;
   float: none;
   overflow: hidden;
+  width: auto;
+  float: none;
+  overflow: hidden;
 }
 .row-fluid .span1 {
-  width: 5.606060602727273%;
+  width: 6.515151511818182%;
 }
 .row-fluid .span2 {
-  width: 14.16666666%;
+  width: 14.999999993333335%;
 }
 .row-fluid .span3 {
-  width: 22.74999999%;
+  width: 23.49999999%;
 }
 .row-fluid .span4 {
-  width: 31.33333332%;
+  width: 31.99999998666667%;
 }
 .row-fluid .span5 {
-  width: 38.66666665%;
+  width: 39.66666665%;
 }
 .row-fluid .span6 {
-  width: 48.49999998%;
+  width: 48.99999998%;
 }
 .row-fluid .span7 {
-  width: 55.33333331%;
+  width: 56.33333331%;
 }
 .row-fluid .span8 {
-  width: 63.66666664%;
+  width: 64.66666664%;
 }
 .row-fluid .span9 {
-  width: 71.99999997%;
+  width: 72.99999997%;
 }
 .row-fluid .span10 {
-  width: 80.3333333%;
+  width: 81.3333333%;
 }
 .row-fluid .span11 {
-  width: 88.66666663000001%;
+  width: 89.66666663000001%;
 }
 .row-fluid .span12 {
-  width: 96.99999996%;
+  width: 97.99999996%;
 }
 /* 
  * =============================================================
@@ -93,47 +109,253 @@
 }
 .row-fluid-alt > [class*="span"] {
   float: left;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 .row-fluid-alt > [class*="span"].l,
 .row-fluid-alt > [class*="span"]:last-child {
   margin-right: 0;
 }
 .row-fluid-alt .span1 {
-  width: 5.594949491627273%;
+  width: 6.504040400718182%;
 }
 .row-fluid-alt .span2 {
-  width: 14.1555555489%;
+  width: 14.988888882233335%;
 }
 .row-fluid-alt .span3 {
-  width: 22.7388888789%;
+  width: 23.4888888789%;
 }
 .row-fluid-alt .span4 {
-  width: 31.3222222089%;
+  width: 31.98888887556667%;
 }
 .row-fluid-alt .span5 {
-  width: 38.6555555389%;
+  width: 39.6555555389%;
 }
 .row-fluid-alt .span6 {
-  width: 48.4888888689%;
+  width: 48.9888888689%;
 }
 .row-fluid-alt .span7 {
-  width: 55.3222221989%;
+  width: 56.3222221989%;
 }
 .row-fluid-alt .span8 {
-  width: 63.6555555289%;
+  width: 64.6555555289%;
 }
 .row-fluid-alt .span9 {
-  width: 71.9888888589%;
+  width: 72.9888888589%;
 }
 .row-fluid-alt .span10 {
-  width: 80.3222221889%;
+  width: 81.3222221889%;
 }
 .row-fluid-alt .span11 {
-  width: 88.6555555189%;
+  width: 89.6555555189%;
 }
 .row-fluid-alt .span12 {
-  width: 96.98888884889999%;
+  width: 97.98888884889999%;
+}
+/* 
+ * =============================================================
+ * HELPER LIB (part of wash)
+ * =============================================================
+ */
+#gradients {
+  /*
+		apparently this is the proper use for gradify
+		otherwise less.js messes up and throws an error if you do it inline...
+		@light:lighten(@success,7%);
+		@dark:darken(@success,10%);
+		#gradients > .gradify(@light, @dark);
+	*/
+
+}
+.overflow {
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+/****** CLEARFIX ******/
+header,
+footer,
+.row-fluid,
+.row-fluid-alt,
+.group,
+.form-group,
+.input-group,
+[class*="-group"] {
+  zoom: 1;
+}
+header:before,
+footer:before,
+.row-fluid:before,
+.row-fluid-alt:before,
+.group:before,
+.form-group:before,
+.input-group:before,
+[class*="-group"]:before {
+  display: table;
+  content: "";
+}
+header:after,
+footer:after,
+.row-fluid:after,
+.row-fluid-alt:after,
+.group:after,
+.form-group:after,
+.input-group:after,
+[class*="-group"]:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+/****** QUICK MODS ******/
+.bump {
+  font-size: 1.4em;
+}
+.unbump {
+  font-size: .75em;
+}
+.al-l {
+  text-align: left;
+}
+.al-c {
+  text-align: center;
+}
+.al-r {
+  text-align: right;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.fix {
+  position: fixed;
+}
+/* 
+ * =============================================================
+ * STRUCTURE LIB (part of wash)
+ * =============================================================
+ */
+/****** Container ******/
+.container {
+  padding: 20px 2%;
+}
+.container-alt {
+  padding: 20px 2%;
+  background: #f5f5f5;
+}
+/* 
+ * =============================================================
+ * ROW FLUID USING OVERFOW:HIDDEN
+ * =============================================================
+ */
+.row-fluid {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+/*margin right instead of margin left to do overflow hidden*//*Use this to set exact percentages and have the last box be ok*/
+.row-fluid > [class*="span"] {
+  float: left;
+  margin-right: 2%;
+}
+.row-fluid > [class*="span"].l,
+.row-fluid > [class*="span"]:last-child {
+  margin-right: 0;
+  width: auto;
+  float: none;
+  overflow: hidden;
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+.row-fluid .span1 {
+  width: 6.515151511818182%;
+}
+.row-fluid .span2 {
+  width: 14.999999993333335%;
+}
+.row-fluid .span3 {
+  width: 23.49999999%;
+}
+.row-fluid .span4 {
+  width: 31.99999998666667%;
+}
+.row-fluid .span5 {
+  width: 39.66666665%;
+}
+.row-fluid .span6 {
+  width: 48.99999998%;
+}
+.row-fluid .span7 {
+  width: 56.33333331%;
+}
+.row-fluid .span8 {
+  width: 64.66666664%;
+}
+.row-fluid .span9 {
+  width: 72.99999997%;
+}
+.row-fluid .span10 {
+  width: 81.3333333%;
+}
+.row-fluid .span11 {
+  width: 89.66666663000001%;
+}
+.row-fluid .span12 {
+  width: 97.99999996%;
+}
+/* 
+ * =============================================================
+ * ROW FLUID NOT NOT NOT USING OVERFOW:HIDDEN
+ * =============================================================
+ */
+/*use this to have a non overflow:hidden set up*/
+.row-fluid-alt {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.row-fluid-alt > [class*="span"] {
+  float: left;
+  margin-right: 2%;
+}
+.row-fluid-alt > [class*="span"].l,
+.row-fluid-alt > [class*="span"]:last-child {
+  margin-right: 0;
+}
+.row-fluid-alt .span1 {
+  width: 6.504040400718182%;
+}
+.row-fluid-alt .span2 {
+  width: 14.988888882233335%;
+}
+.row-fluid-alt .span3 {
+  width: 23.4888888789%;
+}
+.row-fluid-alt .span4 {
+  width: 31.98888887556667%;
+}
+.row-fluid-alt .span5 {
+  width: 39.6555555389%;
+}
+.row-fluid-alt .span6 {
+  width: 48.9888888689%;
+}
+.row-fluid-alt .span7 {
+  width: 56.3222221989%;
+}
+.row-fluid-alt .span8 {
+  width: 64.6555555289%;
+}
+.row-fluid-alt .span9 {
+  width: 72.9888888589%;
+}
+.row-fluid-alt .span10 {
+  width: 81.3222221889%;
+}
+.row-fluid-alt .span11 {
+  width: 89.6555555189%;
+}
+.row-fluid-alt .span12 {
+  width: 97.98888884889999%;
 }
 /* 
  * =============================================================
@@ -269,11 +491,16 @@ body {
   font-size: 63.7%;
   margin: 0px;
   padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   word-wrap: break-word;
 }
 hr {
   height: 1px;
+  margin: 0 0 20px 0;
+  padding: 0;
   margin: 0 0 20px 0;
   padding: 0;
   border: 0;
@@ -478,6 +705,10 @@ form input[type="password"] {
   *display: inline;
   zoom: 1;
   _height: 18px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  _height: 18px;
   height: 18px;
   padding: 4px;
   margin-bottom: 9px;
@@ -492,6 +723,12 @@ form input[type="password"] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -507,6 +744,9 @@ form input[type="password"]:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 form select {
   width: 220px;
@@ -514,6 +754,9 @@ form select {
   border: 1px solid #bebec5;
   height: 30px;
   line-height: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -551,17 +794,30 @@ form input[type="submit"]:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 form .pretty-radio {
   display: block;
   float: left;
   margin: 3px 10px 0px 0px;
   padding: 0px;
+  margin: 3px 10px 0px 0px;
+  padding: 0px;
+  width: 15px;
+  height: 15px;
   width: 15px;
   height: 15px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -573,6 +829,14 @@ form .pretty-radio:hover {
   text-decoration: none;
 }
 form .pretty-radio {
+  background: #fd2e2e;
+  background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
+  background: -webkit-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -o-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
   background: #fd2e2e;
   background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
@@ -599,6 +863,17 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
   background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
+  background: #fd2e2e;
+  background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
+  background: -webkit-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -o-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
+  -webkit-box-shadow: inset 0 5px 10px #f50303;
+  -moz-box-shadow: inset 0 5px 10px #f50303;
+  box-shadow: inset 0 5px 10px #f50303;
   -webkit-box-shadow: inset 0 5px 10px #f50303;
   -moz-box-shadow: inset 0 5px 10px #f50303;
   box-shadow: inset 0 5px 10px #f50303;
@@ -615,11 +890,23 @@ form .pretty-radio.active {
   *display: inline;
   zoom: 1;
   _height: 17px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  _height: 17px;
+  margin: 0 0 10px;
+  padding: 5px 10px;
   margin: 0 0 10px;
   padding: 5px 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -632,6 +919,14 @@ form .pretty-radio.active {
 }
 /*more flexibility in changing these!*/
 .btn-main {
+  background: #fd4747;
+  background: -moz-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd4747), color-stop(100%, #fd4747));
+  background: -webkit-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: -o-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: -ms-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: linear-gradient(to bottom, #fd4747 0%, #fd4747 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd4747', endColorstr='#fd4747');
   background: #fd4747;
   background: -moz-linear-gradient(top, #fd4747 0%, #fd4747 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd4747), color-stop(100%, #fd4747));
@@ -658,12 +953,31 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #fd4747 0%, #fd4747 100%);
   background: linear-gradient(to bottom, #fd4747 0%, #fd4747 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd4747', endColorstr='#fd4747');
+  background: #fd4747;
+  background: -moz-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd4747), color-stop(100%, #fd4747));
+  background: -webkit-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: -o-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: -ms-linear-gradient(top, #fd4747 0%, #fd4747 100%);
+  background: linear-gradient(to bottom, #fd4747 0%, #fd4747 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd4747', endColorstr='#fd4747');
+  -webkit-box-shadow: inset 0 5px 10px #f50303;
+  -moz-box-shadow: inset 0 5px 10px #f50303;
+  box-shadow: inset 0 5px 10px #f50303;
   -webkit-box-shadow: inset 0 5px 10px #f50303;
   -moz-box-shadow: inset 0 5px 10px #f50303;
   box-shadow: inset 0 5px 10px #f50303;
   border: 1px solid #dc0202;
 }
 .btn-secondary {
+  background: #383131;
+  background: -moz-linear-gradient(top, #383131 0%, #383131 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383131), color-stop(100%, #383131));
+  background: -webkit-linear-gradient(top, #383131 0%, #383131 100%);
+  background: -o-linear-gradient(top, #383131 0%, #383131 100%);
+  background: -ms-linear-gradient(top, #383131 0%, #383131 100%);
+  background: linear-gradient(to bottom, #383131 0%, #383131 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#383131', endColorstr='#383131');
   background: #383131;
   background: -moz-linear-gradient(top, #383131 0%, #383131 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383131), color-stop(100%, #383131));
@@ -690,12 +1004,31 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #383131 0%, #383131 100%);
   background: linear-gradient(to bottom, #383131 0%, #383131 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#383131', endColorstr='#383131');
+  background: #383131;
+  background: -moz-linear-gradient(top, #383131 0%, #383131 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #383131), color-stop(100%, #383131));
+  background: -webkit-linear-gradient(top, #383131 0%, #383131 100%);
+  background: -o-linear-gradient(top, #383131 0%, #383131 100%);
+  background: -ms-linear-gradient(top, #383131 0%, #383131 100%);
+  background: linear-gradient(to bottom, #383131 0%, #383131 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#383131', endColorstr='#383131');
+  -webkit-box-shadow: inset 0 5px 10px #0f0d0d;
+  -moz-box-shadow: inset 0 5px 10px #0f0d0d;
+  box-shadow: inset 0 5px 10px #0f0d0d;
   -webkit-box-shadow: inset 0 5px 10px #0f0d0d;
   -moz-box-shadow: inset 0 5px 10px #0f0d0d;
   box-shadow: inset 0 5px 10px #0f0d0d;
   border: 1px solid #020101;
 }
 .btn-grey {
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #f5f5f5));
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: -o-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: -ms-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f5f5f5', endColorstr='#f5f5f5');
   background: #f5f5f5;
   background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #f5f5f5));
@@ -722,12 +1055,31 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
   background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f5f5f5', endColorstr='#f5f5f5');
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #f5f5f5));
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: -o-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: -ms-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
+  background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f5f5f5', endColorstr='#f5f5f5');
+  -webkit-box-shadow: inset 0 5px 10px #cfcfcf;
+  -moz-box-shadow: inset 0 5px 10px #cfcfcf;
+  box-shadow: inset 0 5px 10px #cfcfcf;
   -webkit-box-shadow: inset 0 5px 10px #cfcfcf;
   -moz-box-shadow: inset 0 5px 10px #cfcfcf;
   box-shadow: inset 0 5px 10px #cfcfcf;
   border: 1px solid #c2c2c2;
 }
 .btn-customColour {
+  background: #000000;
+  background: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #000000));
+  background: -webkit-linear-gradient(top, #000000 0%, #000000 100%);
+  background: -o-linear-gradient(top, #000000 0%, #000000 100%);
+  background: -ms-linear-gradient(top, #000000 0%, #000000 100%);
+  background: linear-gradient(to bottom, #000000 0%, #000000 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#000000');
   background: #000000;
   background: -moz-linear-gradient(top, #000000 0%, #000000 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #000000));
@@ -754,6 +1106,17 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #000000 0%, #000000 100%);
   background: linear-gradient(to bottom, #000000 0%, #000000 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#000000');
+  background: #000000;
+  background: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #000000));
+  background: -webkit-linear-gradient(top, #000000 0%, #000000 100%);
+  background: -o-linear-gradient(top, #000000 0%, #000000 100%);
+  background: -ms-linear-gradient(top, #000000 0%, #000000 100%);
+  background: linear-gradient(to bottom, #000000 0%, #000000 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#000000');
+  -webkit-box-shadow: inset 0 5px 10px #000000;
+  -moz-box-shadow: inset 0 5px 10px #000000;
+  box-shadow: inset 0 5px 10px #000000;
   -webkit-box-shadow: inset 0 5px 10px #000000;
   -moz-box-shadow: inset 0 5px 10px #000000;
   box-shadow: inset 0 5px 10px #000000;
@@ -765,11 +1128,15 @@ form .pretty-radio.active {
   width: 300px;
   margin: 10px 0px;
   padding: 15px;
+  margin: 10px 0px;
+  padding: 15px;
 }
 .btn-large {
   display: block;
   font-size: 1.8em;
   width: 250px;
+  margin: 10px 0px;
+  padding: 10px;
   margin: 10px 0px;
   padding: 10px;
 }
@@ -779,10 +1146,14 @@ form .pretty-radio.active {
   width: 200px;
   margin: 10px 0px;
   padding: 10px;
+  margin: 10px 0px;
+  padding: 10px;
 }
 .btn-small {
   display: block;
   width: 150px;
+  margin: 10px 0px;
+  padding: 10px;
   margin: 10px 0px;
   padding: 10px;
   font-size: 1.2em;
@@ -792,12 +1163,16 @@ form .pretty-radio.active {
   width: 100px;
   margin: 10px 0px;
   padding: 10px;
+  margin: 10px 0px;
+  padding: 10px;
   font-size: 1.1em;
 }
 .btn-customSize {
   display: block;
   font-size: 1.6em;
   width: 200px;
+  margin: 10px 0px;
+  padding: 10px;
   margin: 10px 0px;
   padding: 10px;
 }
@@ -815,6 +1190,9 @@ form .pretty-radio.active {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   margin-bottom: 0px;
   margin-left: -1px;
   padding: 5px 10px;
@@ -828,8 +1206,14 @@ form .pretty-radio.active {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
 }
 .btn-set > a:first-child {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
@@ -841,12 +1225,22 @@ form .pretty-radio.active {
   *display: inline;
   zoom: 1;
   _height: 17px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  _height: 17px;
 }
 .btn-dropdown  > a {
   float: left;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
@@ -861,6 +1255,9 @@ form .pretty-radio.active {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
 }
 .btn-dropdown  > a .carat {
   text-indent: -999999px;
@@ -871,11 +1268,18 @@ form .pretty-radio.active {
   padding: 4px 0;
   list-style: none;
   font-size: 100%;
+  margin: 2px 0 0 0;
+  padding: 4px 0;
+  list-style: none;
+  font-size: 100%;
   display: none;
   position: absolute;
   top: 100%;
   right: 0;
   z-index: 200;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -937,6 +1341,9 @@ form .pretty-radio.active {
  * =============================================================
  */
 .messages {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -1055,6 +1462,14 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
   background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
+  background: #fd2e2e;
+  background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
+  background: -webkit-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -o-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
+  background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
   color: #ffffff;
   padding: 10px;
 }
@@ -1072,6 +1487,14 @@ form .pretty-radio.active {
   border: 1px solid #dedede;
 }
 .modal-warning .modal-header {
+  background: #721c15;
+  background: -moz-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bb2d23), color-stop(100%, #721c15));
+  background: -webkit-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: -o-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: -ms-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: linear-gradient(to bottom, #bb2d23 0%, #721c15 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#bb2d23', endColorstr='#721c15');
   background: #721c15;
   background: -moz-linear-gradient(top, #bb2d23 0%, #721c15 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bb2d23), color-stop(100%, #721c15));
@@ -1105,6 +1528,14 @@ form .pretty-radio.active {
   background: -ms-linear-gradient(top, #efb654 0%, #d89014 100%);
   background: linear-gradient(to bottom, #efb654 0%, #d89014 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efb654', endColorstr='#d89014');
+  background: #d89014;
+  background: -moz-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efb654), color-stop(100%, #d89014));
+  background: -webkit-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: -o-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: -ms-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: linear-gradient(to bottom, #efb654 0%, #d89014 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efb654', endColorstr='#d89014');
   color: #ffffff;
   padding: 10px;
 }
@@ -1129,7 +1560,17 @@ form .pretty-radio.active {
 }
 .site-nav.nav-horizontal {
   zoom: 1;
+  zoom: 1;
   background: #383131;
+}
+.site-nav.nav-horizontal:before {
+  display: table;
+  content: "";
+}
+.site-nav.nav-horizontal:after {
+  display: table;
+  content: "";
+  clear: both;
 }
 .site-nav.nav-horizontal:before {
   display: table;
@@ -1145,7 +1586,21 @@ form .pretty-radio.active {
   padding: 0;
   list-style: none;
   font-size: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 100%;
   zoom: 1;
+  zoom: 1;
+}
+.site-nav.nav-horizontal > ul:before {
+  display: table;
+  content: "";
+}
+.site-nav.nav-horizontal > ul:after {
+  display: table;
+  content: "";
+  clear: both;
 }
 .site-nav.nav-horizontal > ul:before {
   display: table;
@@ -1198,6 +1653,10 @@ form .pretty-radio.active {
   padding: 0;
   list-style: none;
   font-size: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 100%;
   position: absolute;
   top: 100%;
   min-width: 200px;
@@ -1234,8 +1693,22 @@ form .pretty-radio.active {
   padding: 0px;
   list-style: none;
   font-size: 100%;
+  margin: 0px 0px 10px;
+  padding: 0px;
+  list-style: none;
+  font-size: 100%;
   border-bottom: 1px solid #000000;
   zoom: 1;
+  zoom: 1;
+}
+.nav-tabs:before {
+  display: table;
+  content: "";
+}
+.nav-tabs:after {
+  display: table;
+  content: "";
+  clear: both;
 }
 .nav-tabs:before {
   display: table;
