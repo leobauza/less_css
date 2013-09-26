@@ -125,7 +125,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-	margin-bottom: 0;
+	margin-bottom:0;
 }
 
 ul {
@@ -134,7 +134,7 @@ ul {
 	margin:0;
 	list-style:disc;
 	li {
-		line-height: 1;
+		line-height:1.6em;
 		margin:0 0 10px;
 		/*all nested*/
 		ul {
@@ -172,7 +172,7 @@ ol {
 	margin:0;
 	list-style:decimal;
 	li {
-		line-height: 1;
+		line-height: 1.6em;
 		margin:0 0 10px;
 		/*all nested*/
 		ol {
@@ -204,6 +204,20 @@ ol {
 				}
 			}
 		}
+	}
+}
+
+/*mixed*/
+ul {
+	ol {
+		padding-top:10px;
+		font-size:100%;
+	}
+}
+ol {
+	ul {
+		padding-top:10px;
+		font-size:100%;
 	}
 }
 /* 

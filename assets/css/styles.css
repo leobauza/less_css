@@ -355,7 +355,7 @@ ul {
   list-style: disc;
 }
 ul li {
-  line-height: 1;
+  line-height: 1.6em;
   margin: 0 0 10px;
   /*all nested*/
 
@@ -386,7 +386,7 @@ ol {
   list-style: decimal;
 }
 ol li {
-  line-height: 1;
+  line-height: 1.6em;
   margin: 0 0 10px;
   /*all nested*/
 
@@ -416,6 +416,15 @@ ol li > ol > li > ol > li > ol {
   background: #f5f5f5;
   padding: 20px 50px 10px;
   margin-top: 10px;
+}
+/*mixed*/
+ul ol {
+  padding-top: 10px;
+  font-size: 100%;
+}
+ol ul {
+  padding-top: 10px;
+  font-size: 100%;
 }
 /* 
  * =============================================================
