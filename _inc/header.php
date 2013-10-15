@@ -17,7 +17,7 @@
 	<![endif]-->
 
 	<!-- fav and touch icons -->
-	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
