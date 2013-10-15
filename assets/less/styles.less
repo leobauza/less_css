@@ -1,9 +1,11 @@
 @import "core.less";
+
 /* 
  * =============================================================
  * BASE LIB 
  * =============================================================
  */
+
 article,
 aside,
 details,
@@ -14,41 +16,41 @@ header,
 hgroup,
 nav,
 section {
-	display: block;
+	display:block;
 }
 audio, canvas, video {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
 }
 audio:not([controls]) {
 	display: none;
 }
 img {
-	max-width: 100%;
-	height: auto;
-	border: 0;
-	-ms-interpolation-mode: bicubic;
+	max-width:100%;
+	height:auto;
+	border:0;
+	-ms-interpolation-mode:bicubic;
 }
 html {
-	font-size: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+	font-size:100%;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
 }
 :focus {
 	outline:none;
 	border:none;
 }
 a:focus {
-	outline: none;
+	outline:none;
 	border:none;
 }
 a:hover, a:active {
-	outline: 0;
+	outline:0;
 }
 
 body {
-	background: @bg-colour;
+	background:@bg-colour;
 	font-size:@base-size;
 	.marpad(0px, 0px);
 	.helvetica;
@@ -64,18 +66,18 @@ hr {
 	overflow:0;
 }
 a {
-	color: @link-colour;
-	text-decoration: none;
+	color:@link-colour;
+	text-decoration:none;
 }
 a:hover {
-	color: @link-colour-hover;
-	text-decoration: underline;
+	color:@link-colour-hover;
+	text-decoration:underline;
 }
 p {
 	font-size:1.4em;
 	line-height:1.6em;
 	color:@dark-grey;
-	margin: 0 0 20px;
+	margin:0 0 20px;
 	padding:0;
 }
 h1,
@@ -84,9 +86,9 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 .45em;
-	font-weight: 700;
-	text-rendering: optimizelegibility;
+	margin:0 0 .45em;
+	font-weight:700;
+	text-rendering:optimizelegibility;
 	line-height:1.2em;
 	a {
 		font-weight:normal;
@@ -96,26 +98,41 @@ h6 {
 	}
 }
 h1 {
-	font-size: 4.8em;
+	font-size:4.8em;
 }
 h2 {
-	font-size: 3.6em;
+	font-size:3.6em;
 }
 h3 {
-	font-size: 2.8em;
+	font-size:2.8em;
 }
 h4 {
-	font-size: 2.2em;
+	font-size:2.2em;
 }
 h5 {
-	font-size: 1.8em;
+	font-size:1.8em;
 }
 h6 {
-	font-size: 1.4em;
+	font-size:1.4em;
 }
 pre {
 	white-space:pre-wrap;
 }
+
+.reverse {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	li,
+	a {
+		color:@white;
+	}
+}
+
 /* 
  * =============================================================
  * LISTS
@@ -125,7 +142,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-	margin-bottom: 0;
+	margin-bottom:0;
 }
 
 ul {
@@ -134,7 +151,7 @@ ul {
 	margin:0;
 	list-style:disc;
 	li {
-		line-height: 1;
+		line-height:1.6em;
 		margin:0 0 10px;
 		/*all nested*/
 		ul {
@@ -172,7 +189,7 @@ ol {
 	margin:0;
 	list-style:decimal;
 	li {
-		line-height: 1;
+		line-height: 1.6em;
 		margin:0 0 10px;
 		/*all nested*/
 		ol {
@@ -206,9 +223,24 @@ ol {
 		}
 	}
 }
+
+/*mixed*/
+ul {
+	ol {
+		padding-top:10px;
+		font-size:100%;
+	}
+}
+ol {
+	ul {
+		padding-top:10px;
+		font-size:100%;
+	}
+}
+
 /* 
  * =============================================================
- * forms
+ * forms (dependency btns library)
  * =============================================================
  */
 form {
@@ -255,10 +287,10 @@ form {
 		}
 	}
 	label, input, textarea, button, select {
-		font-family: @sans-serif;
-		font-size: 1.3em;
-		font-weight: normal;
-		line-height: 1.8em;
+		font-family:@sans-serif;
+		font-size:1.3em;
+		font-weight:normal;
+		line-height:1.8em;
 	}
 	label {
 		display:block;
@@ -270,24 +302,24 @@ form {
 	input[type="text"],
 	input[type="password"] {
 		.inline-block(18px);
-		height: 18px;
-		padding: 4px;
-		margin-bottom: 9px;
-		color: @dark-grey;
+		height:18px;
+		padding:4px;
+		margin-bottom:9px;
+		color:@dark-grey;
 		margin-left:0;
 	}
 
 	textarea,
 	input[type="text"],
 	input[type="password"] {
-		background-color: @white;
-		border: 1px solid @light-grey;
+		background-color:@white;
+		border:1px solid @light-grey;
 		#CSS3 > .border-radius(3px);
 		#CSS3 > .inset-box-shadow( inset 0 1px 1px rgba(0, 0, 0, 0.075) );
 		&:focus {
 			border:1px solid @focus-border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
+			outline:0;
+			outline:thin dotted \9; /* IE6-9 */
 			#CSS3 > .double-box-shadow();
 		}
 	}
@@ -296,17 +328,17 @@ form {
 	}
 	select {
 		width:220px;
-		background-color: white;
-		border: 1px solid @mid-grey;
+		background-color:white;
+		border:1px solid @mid-grey;
 		height:30px;
 		line-height:30px;
 		#CSS3 > .border-radius(5px);
 		&:focus {
 			border:1px solid @focus-border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
-			outline: 5px auto -webkit-focus-ring-color;
-			outline-offset: -2px;
+			outline:0;
+			outline:thin dotted \9; /* IE6-9 */
+			outline:5px auto -webkit-focus-ring-color;
+			outline-offset:-2px;
 		}
 		&[multiple], &[size] {
 			height:auto;
@@ -327,12 +359,18 @@ form {
 		}
 		&:focus {
 			border:1px solid @focus-border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
+			outline:0;
+			outline:thin dotted \9; /* IE6-9 */
 			#CSS3 > .double-box-shadow();
 		}
 	}
-
+}
+/* 
+ * =============================================================
+ * forms w/ jForms
+ * =============================================================
+ */
+form {
 	/*prettify radios a and b*/
 	.pretty-radio {
 		display:block;
@@ -345,7 +383,7 @@ form {
 		font-size:1.2em;
 		text-align:center;
 		&:hover {
-			text-decoration: none;
+			text-decoration:none;
 		}
 		&:active {
 
@@ -368,7 +406,6 @@ form {
 	}
 } /*end form*/
 
-
 /* 
  * =============================================================
  * BUTTONS
@@ -384,7 +421,7 @@ form {
 	text-align:center;
 	font-weight:bold;
 	&:hover {
-		text-decoration: none;
+		text-decoration:none;
 	}
 	&:active {
 		
@@ -486,13 +523,13 @@ form {
 	display:block;
 	width:150px;
 	.marpad(10px 0px, 10px);
-	font-size: 1.2em;
+	font-size:1.2em;
 }
 .btn-smaller {
 	display:block;
-	width: 100px;
+	width:100px;
 	.marpad(10px 0px, 10px);
-	font-size: 1.1em;
+	font-size:1.1em;
 }
 .btn-customSize {
 	display:block;
@@ -513,8 +550,8 @@ form {
 		position:relative;
 		float:left;
 		#CSS3 > .border-radius(0);
-		margin-bottom: 0px;
-		margin-left: -1px;
+		margin-bottom:0px;
+		margin-left:-1px;
 		padding:5px 10px;
 		font-weight:bold;
 		font-size:1.2em;
@@ -532,15 +569,15 @@ form {
 
 
 .btn-dropdown {
-	margin: 0 0 10px 0;
+	margin:0 0 10px 0;
 	position:relative;
 	.inline-block(@btn-height);
 	& > a {
 		float:left;
 		#CSS3 > .border-radius(0);
 		#CSS3 > .border-radius(5px 0 0 5px);
-		margin-bottom: 0px;
-		margin-left: -1px;
+		margin-bottom:0px;
+		margin-left:-1px;
 		padding:5px 10px;
 		text-decoration:none;
 		font-size:1.2em;
@@ -549,29 +586,29 @@ form {
 			#CSS3 > .border-radius(0 5px 5px 0);
 		}
 		.carat {
-			text-indent: -999999px;
-			display: block;
+			text-indent:-999999px;
+			display:block;
 			//insert background image here
 		}
 	}
 	ul {
 		.reset-list(2px 0 0 0, 4px 0);
-		display: none;
+		display:none;
 		position:absolute;
-		top: 100%;
+		top:100%;
 		right:0;
-		z-index: 200;
+		z-index:200;
 		#CSS3 > .border-radius(3px);
-		min-width: 120px;
+		min-width:120px;
 		li {
 			margin:0;
 			a {
-				float: none;
+				float:none;
 				display:block;
 				padding:5px 15px;
-				font-size: 1.2em;
+				font-size:1.2em;
 				&:hover {
-					text-decoration: none;
+					text-decoration:none;
 				}
 			}
 		}
@@ -580,15 +617,15 @@ form {
 
 .dropdown-main {
 	ul {
-		background: lighten(@main-btn-bg,20%);
+		background:lighten(@main-btn-bg,20%);
 		border:1px solid lighten(@main-btn-bg,5%);
 		li {
 			a{
-				background: lighten(@main-btn-bg,20%);
+				background:lighten(@main-btn-bg,20%);
 				color:@dark-grey;
 				&:hover {
 					background:darken(@brand,20%);
-					color: @white;
+					color:@white;
 				}
 				&:active {
 					
@@ -605,11 +642,11 @@ form {
 }
 &.dropdown-secondary {
 	ul {
-		background: lighten(@secondary-btn-bg,20%);
+		background:lighten(@secondary-btn-bg,20%);
 		border:1px solid lighten(@secondary-btn-bg,5%);
 		li {
 			a {
-				background: lighten(@secondary-btn-bg,20%);
+				background:lighten(@secondary-btn-bg,20%);
 				color:@white;
 				font-size: 1.2em;
 				&:hover {
@@ -622,13 +659,13 @@ form {
 }
 &.dropdown-grey {
 	ul {
-		background: darken(@grey-btn-bg,20%);
+		background:darken(@grey-btn-bg,20%);
 		border:1px solid darken(@grey-btn-bg,60%);
 		li {
 			a {
-				background: darken(@grey-btn-bg,20%);
+				background:darken(@grey-btn-bg,20%);
 				color:@black;
-				font-size: 1.2em;
+				font-size:1.2em;
 				&:hover {
 					background:darken(@grey-btn-bg,60%);
 					color:@white;
@@ -637,7 +674,6 @@ form {
 		}
 	}
 }
-
 
 /* 
  * =============================================================
@@ -651,173 +687,23 @@ form {
 	&.status {
 		background:@status;
 		border:1px solid darken(@status,10%);
-		padding: 10px;
-		color: darken(@status,50%);
+		padding:10px;
+		color:darken(@status,50%);
 	}
 	&.error {
 		background:lighten(@error, 20%);
 		border:1px solid @error;
-		padding: 10px;
-		color: @white;
+		padding:10px;
+		color:@white;
 	}
 	&.success {
 		background:@success;
 		border:1px solid darken(@success,20%);
-		padding: 10px;
+		padding:10px;
 		color: @white;
 	}
 }
 
-
-
-/* 
- * =============================================================
- * ACTUAL CORE FOR MODALS
- * =============================================================
- */
-/*all modals*/
-.modal-parent {
-	position:relative;
-	&> [class*=modal] {
-		display:none;
-		position:fixed;
-		top:50%;
-		left:50%;
-		z-index:200;
-		width:500px;
-		margin:-90px 0 0 -250px;
-		/*do sizes make sense?*/
-		&.large {
-			width:800px;
-			margin:-100px 0 0 -400px;
-		}
-		&.medium {
-			width:600px;
-			margin:-100px 0 0 -400px;
-		}
-		&.small {
-			width:400px;
-			margin:-100px 0 0 -400px;
-		}
-		&.variable {
-			width:50%;
-			margin:-90px 0 0 -25%;
-		}
-		/*positioning need auto detection for hover*/
-		&.position-top {
-			position:absolute;
-			bottom:100%;
-			top:auto;
-			left:0;
-			margin:0;
-		}
-	}
-	// "limit" class keeps the modal & overlay contained to this parent
-	&.limit {
-		.overlay {
-			position:absolute;
-		}
-		&> [class*=modal] {
-			position:absolute;
-		}
-	}
-}
-/*all overlays*/
-.overlay {
-	position:fixed;
-	z-index:100;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	&.dark {
-		background:@black;
-		background:fade(@black,90%);
-	}
-	&.light {
-		background:@white;
-		background:fade(@white,90%);
-	}
-}
-.modal {
-	.modal-header {
-		background:@dark-grey;
-		color:@white;
-		padding:10px;
-	}
-	.modal-body {
-		background:@lighter-grey;
-		color:@dark-grey;
-		padding:10px;
-	}
-	.modal-footer {
-		background:@grey;
-		color:@white;
-		padding:10px;
-	}
-}
-
-.modal-main {
-	border:1px solid @light-grey;
-	.modal-header {
-		#gradients > .main-gradient();
-		color:@white;
-		padding:10px;
-	}
-	.modal-body {
-		background:@white;
-		color:@dark-grey;
-		padding:10px;
-	}
-	.modal-footer {
-		background:@grey;
-		color:@white;
-		padding:10px;
-	}
-}
-
-.modal-warning {
-	border:1px solid @light-grey;
-	.modal-header {
-		@light:lighten(@error,7%);
-		@dark:darken(@error,10%);
-		#gradients > .gradify(@light, @dark);
-		color:@white;
-		padding:10px;
-	}
-	.modal-body {
-		background:@white;
-		color:@dark-grey;
-		padding:10px;
-	}
-	.modal-footer {
-		background:@light-grey;
-		color:@black;
-		padding:10px;
-	}
-}
-
-.modal-success {
-	border:1px solid @light-grey;
-	.modal-header {
-		//apparently this is the proper use for gradify
-		@light:lighten(@success,7%);
-		@dark:darken(@success,10%);
-		#gradients > .gradify(@light, @dark);
-		color:@white;
-		padding:10px;
-	}
-	.modal-body {
-		background:@white;
-		color:@dark-grey;
-		padding:10px;
-	}
-	.modal-footer {
-		background:@light-grey;
-		color:@black;
-		padding:10px;
-	}
-}
 /* 
  * =============================================================
  * NAV
@@ -825,79 +711,77 @@ form {
  */
 
 .site-nav {
-	&.nav-horizontal {
+	.group;
+	//@file:"platy.png";
+	//@url:"@{apppath}@{file}";	
+	//background:@bg-site-nav-horizontal url(@url);
+	background:@bg-site-nav-horizontal;
+	&> ul {
+		.reset-list();
 		.group;
-		//@file:"platy.png";
-		//@url:"@{apppath}@{file}";	
-		//background:@bg-site-nav-horizontal url(@url);
-		background:@bg-site-nav-horizontal;
-		&> ul {
-			.reset-list();
-			.group;
-			&> li {
-				margin:0;
+		&> li {
+			margin:0;
+			float:left;
+			position:relative;
+			&.first {
+
+			}
+			&.last {
+
+			}
+			&.active {
+
+			}
+			&> a {
 				float:left;
-				position:relative;
-				&.first {
-
+				color:@color-site-nav-horizontal;
+				border-right:1px solid @border-site-nav-horizontal;
+				display:block;
+				padding:25px 20px;
+				font-size:1.2em;
+				&:hover {
+					background:@border-site-nav-horizontal;
+					text-decoration:none;
 				}
-				&.last {
-
-				}
-				&.active {
-
-				}
-				&> a {
-					float:left;
-					color:@color-site-nav-horizontal;
-					border-right:1px solid @border-site-nav-horizontal;
-					display:block;
-					padding:25px 20px;
-					font-size:1.2em;
+				@media (max-width: 1024px) {
 					&:hover {
-						background:@border-site-nav-horizontal;
-						text-decoration:none;
-					}
-					@media (max-width: 1024px) {
-						&:hover {
-							background:inherit;
-						}
+						background:inherit;
 					}
 				}
-				.btn-dropdown {
-					display:none;
-					float:left;
-					color:@white;
-					padding: 25px 10px;
-					font-size: 1.2em;
-					border-right:1px solid @border-site-nav-horizontal;
-					@media (max-width: 1024px) {
+			}
+			.btn-dropdown {
+				display:none;
+				float:left;
+				color:@white;
+				padding:25px 10px;
+				font-size:1.2em;
+				border-right:1px solid @border-site-nav-horizontal;
+				@media (max-width: 1024px) {
+					display:block;
+				}
+			}
+			/*SECOND LEVEL*/
+			&> ul {
+				.reset-list();
+				position:absolute;
+				top:100%;
+				min-width:200px;
+				display:none;
+				background:@bg-site-nav-horizontal;
+				&> li {
+					margin:0;
+					a {
 						display:block;
-					}
-				}
-				/*SECOND LEVEL*/
-				&> ul {
-					.reset-list();
-					position:absolute;
-					top:100%;
-					min-width:200px;
-					display:none;
-					background:@bg-site-nav-horizontal;
-					&> li {
-						margin:0;
-						a {
-							display:block;
-							padding:10px 20px;
-							font-size:1.2em;
-							&:hover {
-								text-decoration:none;
-							}
+						padding:10px 20px;
+						font-size:1.2em;
+						&:hover {
+							text-decoration:none;
 						}
 					}
 				}
 			}
 		}
-	} /*end horizontal*/
+	}
 } /*end general site-nav*/
 .menu {
 	&.menu-left {
@@ -998,6 +882,7 @@ form {
 		//top:100%;
 	}
 }
+
 #admin-menu {
 	.dropdown {
 		li {
@@ -1006,14 +891,7 @@ form {
 	} 
 }
 
-
 //subtheme CSS separately from templates subtheming? 
 //otherwise we need to go back and change the colors in the subtheme...or figure out a way to change the colours using
 //some other mechanism.
 @import "subtheme.less";
-
-
-
-
-
-

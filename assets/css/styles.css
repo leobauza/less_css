@@ -38,7 +38,12 @@
   float: left;
   margin-right: 2%;
 }
-.row-fluid > [class*="span"].l,
+.row-fluid > [class*="span"].l {
+  margin-right: 0;
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
 .row-fluid > [class*="span"]:last-child {
   margin-right: 0;
   width: auto;
@@ -95,7 +100,9 @@
   float: left;
   margin-right: 2%;
 }
-.row-fluid-alt > [class*="span"].l,
+.row-fluid-alt > [class*="span"].l {
+  margin-right: 0;
+}
 .row-fluid-alt > [class*="span"]:last-child {
   margin-right: 0;
 }
@@ -137,23 +144,59 @@
 }
 /* 
  * =============================================================
+ * STATIC SIDEBAR
+ * =============================================================
+ */
+.static-sidebar .sidebar {
+  width: 360px;
+  float: left;
+}
+.static-sidebar .main {
+  padding: 20px;
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+/* 
+ * =============================================================
  * HELPER LIB (part of wash)
  * =============================================================
  */
 #gradients {
   /*
 		apparently this is the proper use for gradify
-		otherwise less.js messes up and throws an error if you do it inline...
+		otherwise less.js mess up and throws an error if you do it inline...
 		@light:lighten(@success,7%);
 		@dark:darken(@success,10%);
 		#gradients > .gradify(@light, @dark);
 	*/
 
 }
+/****** IE******/
 .overflow {
   width: auto;
   float: none;
   overflow: hidden;
+}
+/****** TEST PATTER MATCHING DELETE?? ******/
+/****** VERTICAL DIV ALIGNMENT ******/
+.align-outter {
+  display: table;
+  height: 300px;
+  overflow: hidden;
+  *position: relative;
+}
+.align-outter .align-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  *position: absolute;
+  *top: 50%;
+}
+.align-outter .align-inner .ie {
+  *position: relative;
+  *top: -50%;
 }
 /****** CLEARFIX ******/
 header,
@@ -337,6 +380,17 @@ h6 {
 pre {
   white-space: pre-wrap;
 }
+.reverse h1,
+.reverse h2,
+.reverse h3,
+.reverse h4,
+.reverse h5,
+.reverse h6,
+.reverse p,
+.reverse li,
+.reverse a {
+  color: #ffffff;
+}
 /* 
  * =============================================================
  * LISTS
@@ -355,7 +409,7 @@ ul {
   list-style: disc;
 }
 ul li {
-  line-height: 1;
+  line-height: 1.6em;
   margin: 0 0 10px;
   /*all nested*/
 
@@ -386,7 +440,7 @@ ol {
   list-style: decimal;
 }
 ol li {
-  line-height: 1;
+  line-height: 1.6em;
   margin: 0 0 10px;
   /*all nested*/
 
@@ -417,15 +471,20 @@ ol li > ol > li > ol > li > ol {
   padding: 20px 50px 10px;
   margin-top: 10px;
 }
+/*mixed*/
+ul ol {
+  padding-top: 10px;
+  font-size: 100%;
+}
+ol ul {
+  padding-top: 10px;
+  font-size: 100%;
+}
 /* 
  * =============================================================
- * forms
+ * forms (dependency btns library)
  * =============================================================
  */
-form {
-  /*prettify radios a and b*/
-
-}
 form fieldset {
   border: none;
   padding: 0;
@@ -551,6 +610,15 @@ form input[type="submit"]:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+/* 
+ * =============================================================
+ * forms w/ jForms
+ * =============================================================
+ */
+form {
+  /*prettify radios a and b*/
+
 }
 form .pretty-radio {
   display: block;
@@ -962,238 +1030,76 @@ form .pretty-radio.active {
 }
 /* 
  * =============================================================
- * ACTUAL CORE FOR MODALS
- * =============================================================
- */
-/*all modals*/
-.modal-parent {
-  position: relative;
-}
-.modal-parent > [class*=modal] {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 200;
-  width: 500px;
-  margin: -90px 0 0 -250px;
-  /*do sizes make sense?*/
-
-  /*positioning need auto detection for hover*/
-
-}
-.modal-parent > [class*=modal].large {
-  width: 800px;
-  margin: -100px 0 0 -400px;
-}
-.modal-parent > [class*=modal].medium {
-  width: 600px;
-  margin: -100px 0 0 -400px;
-}
-.modal-parent > [class*=modal].small {
-  width: 400px;
-  margin: -100px 0 0 -400px;
-}
-.modal-parent > [class*=modal].variable {
-  width: 50%;
-  margin: -90px 0 0 -25%;
-}
-.modal-parent > [class*=modal].position-top {
-  position: absolute;
-  bottom: 100%;
-  top: auto;
-  left: 0;
-  margin: 0;
-}
-.modal-parent.limit .overlay {
-  position: absolute;
-}
-.modal-parent.limit > [class*=modal] {
-  position: absolute;
-}
-/*all overlays*/
-.overlay {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.overlay.dark {
-  background: #000000;
-  background: rgba(0, 0, 0, 0.9);
-}
-.overlay.light {
-  background: #ffffff;
-  background: rgba(255, 255, 255, 0.9);
-}
-.modal .modal-header {
-  background: #2d2d2d;
-  color: #ffffff;
-  padding: 10px;
-}
-.modal .modal-body {
-  background: #eeeeee;
-  color: #2d2d2d;
-  padding: 10px;
-}
-.modal .modal-footer {
-  background: #666666;
-  color: #ffffff;
-  padding: 10px;
-}
-.modal-main {
-  border: 1px solid #dedede;
-}
-.modal-main .modal-header {
-  background: #fd2e2e;
-  background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
-  background: -webkit-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -o-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
-  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
-  color: #ffffff;
-  padding: 10px;
-}
-.modal-main .modal-body {
-  background: #ffffff;
-  color: #2d2d2d;
-  padding: 10px;
-}
-.modal-main .modal-footer {
-  background: #666666;
-  color: #ffffff;
-  padding: 10px;
-}
-.modal-warning {
-  border: 1px solid #dedede;
-}
-.modal-warning .modal-header {
-  background: #721c15;
-  background: -moz-linear-gradient(top, #bb2d23 0%, #721c15 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bb2d23), color-stop(100%, #721c15));
-  background: -webkit-linear-gradient(top, #bb2d23 0%, #721c15 100%);
-  background: -o-linear-gradient(top, #bb2d23 0%, #721c15 100%);
-  background: -ms-linear-gradient(top, #bb2d23 0%, #721c15 100%);
-  background: linear-gradient(to bottom, #bb2d23 0%, #721c15 100%);
-  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#bb2d23', endColorstr='#721c15');
-  color: #ffffff;
-  padding: 10px;
-}
-.modal-warning .modal-body {
-  background: #ffffff;
-  color: #2d2d2d;
-  padding: 10px;
-}
-.modal-warning .modal-footer {
-  background: #dedede;
-  color: #000000;
-  padding: 10px;
-}
-.modal-success {
-  border: 1px solid #dedede;
-}
-.modal-success .modal-header {
-  background: #d89014;
-  background: -moz-linear-gradient(top, #efb654 0%, #d89014 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efb654), color-stop(100%, #d89014));
-  background: -webkit-linear-gradient(top, #efb654 0%, #d89014 100%);
-  background: -o-linear-gradient(top, #efb654 0%, #d89014 100%);
-  background: -ms-linear-gradient(top, #efb654 0%, #d89014 100%);
-  background: linear-gradient(to bottom, #efb654 0%, #d89014 100%);
-  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efb654', endColorstr='#d89014');
-  color: #ffffff;
-  padding: 10px;
-}
-.modal-success .modal-body {
-  background: #ffffff;
-  color: #2d2d2d;
-  padding: 10px;
-}
-.modal-success .modal-footer {
-  background: #dedede;
-  color: #000000;
-  padding: 10px;
-}
-/* 
- * =============================================================
  * NAV
  * =============================================================
  */
 .site-nav {
-  /*end horizontal*/
-
-}
-.site-nav.nav-horizontal {
   zoom: 1;
-  background: #383131;
+  background: #272727;
 }
-.site-nav.nav-horizontal:before {
+.site-nav:before {
   display: table;
   content: "";
 }
-.site-nav.nav-horizontal:after {
+.site-nav:after {
   display: table;
   content: "";
   clear: both;
 }
-.site-nav.nav-horizontal > ul {
+.site-nav > ul {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 100%;
   zoom: 1;
 }
-.site-nav.nav-horizontal > ul:before {
+.site-nav > ul:before {
   display: table;
   content: "";
 }
-.site-nav.nav-horizontal > ul:after {
+.site-nav > ul:after {
   display: table;
   content: "";
   clear: both;
 }
-.site-nav.nav-horizontal > ul > li {
+.site-nav > ul > li {
   margin: 0;
   float: left;
   position: relative;
   /*SECOND LEVEL*/
 
 }
-.site-nav.nav-horizontal > ul > li > a {
+.site-nav > ul > li > a {
   float: left;
   color: #ffffff;
-  border-right: 1px solid #0f0d0d;
+  border-right: 1px solid #1f1f1f;
   display: block;
   padding: 25px 20px;
   font-size: 1.2em;
 }
-.site-nav.nav-horizontal > ul > li > a:hover {
-  background: #0f0d0d;
+.site-nav > ul > li > a:hover {
+  background: #1f1f1f;
   text-decoration: none;
 }
 @media (max-width: 1024px) {
-  .site-nav.nav-horizontal > ul > li > a:hover {
+  .site-nav > ul > li > a:hover {
     background: inherit;
   }
 }
-.site-nav.nav-horizontal > ul > li .btn-dropdown {
+.site-nav > ul > li .btn-dropdown {
   display: none;
   float: left;
   color: #ffffff;
   padding: 25px 10px;
   font-size: 1.2em;
-  border-right: 1px solid #0f0d0d;
+  border-right: 1px solid #1f1f1f;
 }
 @media (max-width: 1024px) {
-  .site-nav.nav-horizontal > ul > li .btn-dropdown {
+  .site-nav > ul > li .btn-dropdown {
     display: block;
   }
 }
-.site-nav.nav-horizontal > ul > li > ul {
+.site-nav > ul > li > ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1202,17 +1108,17 @@ form .pretty-radio.active {
   top: 100%;
   min-width: 200px;
   display: none;
-  background: #383131;
+  background: #272727;
 }
-.site-nav.nav-horizontal > ul > li > ul > li {
+.site-nav > ul > li > ul > li {
   margin: 0;
 }
-.site-nav.nav-horizontal > ul > li > ul > li a {
+.site-nav > ul > li > ul > li a {
   display: block;
   padding: 10px 20px;
   font-size: 1.2em;
 }
-.site-nav.nav-horizontal > ul > li > ul > li a:hover {
+.site-nav > ul > li > ul > li a:hover {
   text-decoration: none;
 }
 /*end general site-nav*/
@@ -1223,7 +1129,7 @@ form .pretty-radio.active {
   float: right;
 }
 .menu.menu-right li.first {
-  border-left: 1px solid #0f0d0d;
+  border-left: 1px solid #1f1f1f;
 }
 .menu.menu-right li.last a {
   border: none;
