@@ -23,6 +23,7 @@
 <body>
 	<header class="site-header container">
 		<h1>Site Name</h1>
+		<?php print $_SERVER['DOCUMENT_ROOT']; ?>
 	</header>
 	<nav class="site-nav nav-horizontal" data-image="true">
 		<ul class="menu menu-left">
