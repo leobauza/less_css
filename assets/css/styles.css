@@ -1222,7 +1222,7 @@ form .pretty-radio.active {
   }
   /*Use this to set exact percentages and have the last box be ok*/
   [class*="row-fluid"] > [class*="span"]:last-child {
-    overflow: auto;
+    overflow: visible;
   }
 }
 @media only screen and (device-width: 768px) {
